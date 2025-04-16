@@ -11,12 +11,18 @@ import { RootState } from "../utils/appStore";
 import { addUser, removeUser, UserState } from "../utils/userSlice";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import usePopularMovies from "../hooks/usePopularMovies";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import useUpcomingMovies from "../hooks/useUpcomingMovies";
 
 const Browse: React.FC = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
     useNowPlayingMovies();
+    usePopularMovies();
+    useTopRatedMovies();
+    useUpcomingMovies();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
