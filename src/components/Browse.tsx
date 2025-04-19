@@ -14,8 +14,10 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomingMovies from "../hooks/useUpcomingMovies";
+import GPTSearch from "./GPTSearch";
 
 const Browse: React.FC = () => {
+    const showGPTSearch = useSelector((store: RootState) => store.gpt.showGPTSearch);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -27,11 +29,11 @@ const Browse: React.FC = () => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                dispatch(addUser({ 
-                    uid: user.uid, 
-                    displayName: user.displayName, 
-                    email: user.email, 
-                    photoURL: user.photoURL 
+                dispatch(addUser({
+                    uid: user.uid,
+                    displayName: user.displayName,
+                    email: user.email,
+                    photoURL: user.photoURL
                 }));
             } else {
                 dispatch(removeUser());
@@ -44,8 +46,17 @@ const Browse: React.FC = () => {
     return (
         <div>
             <Header />
-            <MainContainer />
-            <SecondaryContainer />
+            {showGPTSearch ? (
+                <GPTSearch />
+            ) :
+                (
+                    <>
+                        <MainContainer />
+                        <SecondaryContainer />
+                    </>
+                )
+            }
+
         </div>
     );
 };

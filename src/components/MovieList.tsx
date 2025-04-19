@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard";
 
-export interface Movie {
+interface Movie {
     adult: boolean;
     backdrop_path: string | null;
     genre_ids: number[];
