@@ -17,7 +17,7 @@ const useTrailerVideo = (movieId:number) => {
         dispatch(addTrailerVideo(trailer));
     }
     useEffect(()=>{
-        getMovieVideos();
+        !trailer && getMovieVideos();
     },[])
     return trailer;
 }
