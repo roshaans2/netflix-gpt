@@ -5,11 +5,13 @@ import GPTSearchBar from "./GPTSearchBar";
 const GPTSearch:React.FC = () => {
     return(
         <div>
-            <div className="fixed -z-10">
+            <div className="absolute -z-10">
                 <img src={NETFLIX_BACKGROUND} alt="hero-bg" />
             </div>
-            <GPTSearchBar />
-            <GPTMovieSuggestions />
+            <div>
+                <GPTSearchBar />
+                <GPTMovieSuggestions />
+            </div>
         </div>
     )
 };
