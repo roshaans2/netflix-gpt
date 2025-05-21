@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../utils/appStore";
-import MovieList from "./MovieList";
-import MovieDetails from "./MovieDetail";
-import { setSelectedMovieId } from "../utils/gptSlice";
+import { RootState } from "../../utils/store/appStore";
+import MovieList from "../Movie/MovieList";
+import MovieDetails from "../Movie/MovieDetail";
+import { setSelectedMovieId } from "../../utils/store/gptSlice";
 
 const GPTMovieSuggestions:React.FC = () => {
     const {movieResults,movieNames,selectedMovieId} = useSelector((store:RootState) => store.gpt);

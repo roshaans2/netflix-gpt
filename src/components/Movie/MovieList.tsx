@@ -1,7 +1,5 @@
-import { useState } from "react";
 import MovieCard from "./MovieCard";
-import MovieDetails from "./MovieDetail";
-import { setSelectedMovieId } from "../utils/gptSlice";
+import { setSelectedMovieId } from "../../utils/store/gptSlice";
 import { useDispatch } from "react-redux";
 
 interface Movie {

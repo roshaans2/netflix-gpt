@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addUpcomingMovies } from "../utils/movieSlice";
+import { addUpcomingMovies } from "../utils/store/movieSlice";
 import { useEffect, useState } from "react";
 import { API_OPTIONS } from "../utils/constants";
-import { RootState } from "../utils/appStore";
+import { RootState } from "../utils/store/appStore";
 
 const useUpcomingMovies = () => {
     const dispatch = useDispatch();

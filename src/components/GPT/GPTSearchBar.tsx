@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import lang from "../utils/languageConstants";
-import { RootState } from "../utils/appStore";
+import lang from "../../utils/languageConstants";
+import { RootState } from "../../utils/store/appStore";
 import { useRef } from "react";
-import { genai } from "../utils/genai";
-import { API_OPTIONS } from "../utils/constants";
-import { addGptMovieResults } from "../utils/gptSlice";
+import { genai } from "../../utils/genai";
+import { API_OPTIONS } from "../../utils/constants";
+import { addGptMovieResults } from "../../utils/store/gptSlice";
 
 const GPTSearchBar:React.FC = () => {
     const langKey = useSelector((store:RootState)=>store.config.lang)

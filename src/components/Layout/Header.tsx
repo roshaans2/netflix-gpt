@@ -1,13 +1,13 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../utils/appStore";
-import { removeUser, UserState } from "../utils/userSlice";
+import { RootState } from "../../utils/store/appStore";
+import { removeUser, UserState } from "../../utils/store/userSlice";
 import { useEffect } from "react";
-import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
-import { toggleGPTSearchView } from "../utils/gptSlice";
-import { changeLanguage } from "../utils/configSlice";
+import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../../utils/constants";
+import { toggleGPTSearchView } from "../../utils/store/gptSlice";
+import { changeLanguage } from "../../utils/store/configSlice";
 
 const Header: React.FC = () => {
     const navigate = useNavigate();

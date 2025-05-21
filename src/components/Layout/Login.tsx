@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import { checkValidData } from "../utils/validate";
+import { checkValidData } from "../../utils/validate";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, UserState } from "../utils/userSlice";
-import { RootState } from "../utils/appStore";
-import { DEFAULT_USER_PROFILE, NETFLIX_BACKGROUND } from "../utils/constants";
+import { addUser, UserState } from "../../utils/store/userSlice";
+import { RootState } from "../../utils/store/appStore";
+import { DEFAULT_USER_PROFILE, NETFLIX_BACKGROUND } from "../../utils/constants";
 
 const Login: React.FC = () => {
     const dispatch = useDispatch();

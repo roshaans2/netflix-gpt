@@ -1,6 +1,6 @@
 import {  useSelector } from "react-redux"
-import { RootState } from "../utils/appStore"
-import useTrailerVideo from "../hooks/useTrailerVideo"
+import { RootState } from "../../utils/store/appStore"
+import useTrailerVideo from "../../hooks/useTrailerVideo"
 
 interface Video {
     key:string

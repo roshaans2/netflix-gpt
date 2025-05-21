@@ -1,4 +1,4 @@
-import { NETFLIX_BACKGROUND } from "../utils/constants";
+import { NETFLIX_BACKGROUND } from "../../utils/constants";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import GPTSearchBar from "./GPTSearchBar";
 

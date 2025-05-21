@@ -1,8 +1,8 @@
 import React from 'react';
-import Body from './components/Body';
-import Header from './components/Header';
+import Body from './components/Layout/Body';
+import Header from './components/Layout/Header';
 import { Provider } from 'react-redux';
-import appStore from './utils/appStore';
+import appStore from './utils/store/appStore';
 
 function App() {
   return (

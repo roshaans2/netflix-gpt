@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { API_OPTIONS, IMG_CDN_URL } from "../utils/constants";
+import { API_OPTIONS, IMG_CDN_URL } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../utils/appStore";
-import { addGptMovieDetails } from "../utils/gptSlice";
+import { RootState } from "../../utils/store/appStore";
+import { addGptMovieDetails } from "../../utils/store/gptSlice";
 
 interface MovieDetailsProps {
     id:number,
